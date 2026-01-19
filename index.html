@@ -94,6 +94,36 @@
           <a class="btn btn-outline" href="#contact">Hire / Contact</a>
         </div>
 
+        <!-- VISIT MY PROFILES -->
+        <div class="visit-profiles glass-card">
+          <div class="visit-head">
+            <h3>Visit my profiles</h3>
+            <p class="muted small">
+              Explore my professional and project portfolio presence.
+            </p>
+          </div>
+
+          <div class="visit-grid">
+            <a class="visit-card" href="https://www.linkedin.com/in/navaneeth-rampally-4b5a1136a/" target="_blank">
+              <div class="visit-icon">in</div>
+              <div class="visit-info">
+                <h4>LinkedIn</h4>
+                <p>Professional profile, experience & certifications</p>
+              </div>
+              <div class="visit-arrow">↗</div>
+            </a>
+
+            <a class="visit-card" href="https://github.com/Navaneeth-Rampally" target="_blank">
+              <div class="visit-icon">GH</div>
+              <div class="visit-info">
+                <h4>GitHub</h4>
+                <p>Projects, source code & contributions</p>
+              </div>
+              <div class="visit-arrow">↗</div>
+            </a>
+          </div>
+        </div>
+
         <div class="about-panel" id="aboutPanel">
           <h3>About Me</h3>
           <p>
@@ -118,7 +148,7 @@
         </div>
       </div>
 
-      <!-- RIGHT SIDE (HIGHLIGHTS UPGRADED) -->
+      <!-- RIGHT SIDE -->
       <div class="ultra-right">
 
         <!-- VALUE SNAPSHOT -->
@@ -126,11 +156,10 @@
           <div class="snapshot-header">
             <h3>Value Snapshot</h3>
             <p class="muted small">
-              A recruiter-friendly summary of my strengths, measurable impact, and tools.
+              A friendly summary of my strengths, measurable impact, and tools.
             </p>
           </div>
 
-          <!-- IMPACT METRICS -->
           <div class="impact-metrics">
             <div class="impact-card">
               <span class="impact-num">96.43%</span>
@@ -153,7 +182,6 @@
             </div>
           </div>
 
-          <!-- CORE STRENGTHS -->
           <div class="snapshot-block">
             <h4 class="block-title">Core Strengths</h4>
             <div class="pill-grid">
@@ -166,7 +194,6 @@
             </div>
           </div>
 
-          <!-- TOOLS STACK -->
           <div class="snapshot-block">
             <h4 class="block-title">Tools & Stack</h4>
             <div class="tool-grid">
@@ -178,15 +205,8 @@
               <div class="tool">Streamlit</div>
             </div>
           </div>
-
-          <!-- FAST LINKS -->
-          <div class="snapshot-links">
-            <a class="link-btn" href="https://www.linkedin.com/in/navaneeth-rampally-4b5a1136a/" target="_blank">LinkedIn</a>
-            <a class="link-btn" href="https://github.com/Navaneeth-Rampally" target="_blank">GitHub</a>
-          </div>
         </div>
 
-        <!-- MINI FEATURE CARD -->
         <div class="glass-card mini-feature">
           <h3>What I’m Working On</h3>
           <p class="muted">
@@ -202,7 +222,6 @@
         </div>
 
       </div>
-
     </div>
   </section>
 
@@ -257,7 +276,7 @@
           data-title="Twitter Spam Detection"
           data-desc="Extreme Learning Machines (ELM) model to detect spam users and fake accounts."
           data-tech="Python • ML • Data Analysis"
-          data-github="https://github.com/Navaneeth-Rampally/Spam-Detection.git"
+          data-github="https://github.com/Navaneeth-Rampally/twitter-spam"
           data-demo="">
           <h3>Twitter Spam Detection</h3>
           <p>Using Extreme Learning Machines (ELM) to filter fake users and spam.</p>
@@ -428,13 +447,19 @@
         <div class="glass-card card">
           <h3>Send a Message</h3>
 
-          <form id="contactForm">
-            <input type="text" name="from_name" placeholder="Your Name" required />
-            <input type="email" name="from_email" placeholder="Your Email" required />
+          <!-- ✅ FORMSPREE FORM -->
+          <form action="https://formspree.io/f/xgooyzar" method="POST" id="contactForm">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
             <textarea name="message" placeholder="Your Message..." required></textarea>
+
+            <!-- Optional Anti-spam -->
+            <input type="text" name="_gotcha" style="display:none" />
+
             <button type="submit" class="btn btn-primary">Send Message</button>
             <p class="form-status" id="formStatus"></p>
           </form>
+
         </div>
       </div>
     </div>
@@ -468,8 +493,6 @@
     <a class="qa-btn" href="https://wa.me/917659998384" target="_blank" title="WhatsApp">💬</a>
   </div>
 
-  <!-- EmailJS SDK -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

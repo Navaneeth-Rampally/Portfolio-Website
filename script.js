@@ -149,7 +149,6 @@ projectCards.forEach(card => {
 
     modalGithub.href = card.dataset.github;
 
-    // Demo optional
     if (card.dataset.demo && card.dataset.demo.trim() !== "") {
       modalDemo.style.display = "inline-flex";
       modalDemo.href = card.dataset.demo;
@@ -210,26 +209,8 @@ window.addEventListener("load", () => {
 
 
 /***********************
-  CONTACT FORM (EmailJS)
+  CONTACT FORM (FORMSPREE)
 ************************/
-/*
-  ✅ SETUP REQUIRED:
-  1) Create account: https://www.emailjs.com/
-  2) Create Email Service
-  3) Create Email Template
-  4) Replace below values
-*/
-const PUBLIC_KEY = "YOUR_PUBLIC_KEY";
-const SERVICE_ID = "YOUR_SERVICE_ID";
-const TEMPLATE_ID = "YOUR_TEMPLATE_ID";
-
-// Initialize EmailJS only if keys are updated
-try {
-  if (PUBLIC_KEY !== "YOUR_PUBLIC_KEY") {
-    emailjs.init(PUBLIC_KEY);
-  }
-} catch (e) {}
-
 const contactForm = document.getElementById("contactForm");
 const formStatus = document.getElementById("formStatus");
 
@@ -238,11 +219,22 @@ contactForm.addEventListener("submit", async (e) => {
   formStatus.textContent = "Sending...";
 
   try {
-    await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, contactForm);
-    formStatus.textContent = "Message sent successfully!";
-    contactForm.reset();
-  } catch (err) {
-    formStatus.textContent = "Failed to send. Please try again.";
+    const formData = new FormData(contactForm);
+
+    const response = await fetch(contactForm.action, {
+      method: "POST",
+      body: formData,
+      headers: { Accept: "application/json" }
+    });
+
+    if (response.ok) {
+      formStatus.textContent = "Message sent successfully!";
+      contactForm.reset();
+    } else {
+      formStatus.textContent = "Failed to send. Please try again.";
+    }
+  } catch (error) {
+    formStatus.textContent = "Network error. Please try again.";
   }
 });
 
