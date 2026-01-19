@@ -37,7 +37,8 @@
         /* Typography */
         h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 15px; background: linear-gradient(to right, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         h2 { font-size: 2rem; margin-bottom: 40px; border-left: 5px solid var(--primary); padding-left: 15px; }
-        h3 { color: var(--text); margin-bottom: 10px; }
+        h3 { color: var(--text); margin-bottom: 5px; font-size: 1.25rem;}
+        h4 { color: var(--accent); margin-bottom: 10px; font-weight: 600; font-size: 1rem; }
         
         /* Hero Section */
         .hero { min-height: 90vh; display: flex; align-items: center; text-align: center; justify-content: center; flex-direction: column; }
@@ -84,11 +85,11 @@
             border-radius: 12px; 
             transition: all 0.3s ease; 
             border: 1px solid transparent;
-            display: block; /* Makes anchor tag behave like a block */
+            display: block; 
             color: var(--text);
+            position: relative;
         }
         
-        /* Hover Effect for Projects */
         .card:hover { 
             transform: translateY(-7px); 
             background: #26334d; 
@@ -97,18 +98,46 @@
         }
 
         .card .tech-stack { margin-top: 15px; font-size: 0.85rem; color: var(--accent); font-weight: 600; }
-        .card p { color: var(--text-muted); }
+        .card p { color: var(--text-muted); font-size: 0.95rem; }
+
+        /* Experience & Education Lists */
+        .list-item { 
+            background: var(--card-bg); 
+            padding: 25px; 
+            border-radius: 8px; 
+            margin-bottom: 20px; 
+            border-left: 4px solid var(--primary);
+        }
         
-        /* Experience */
-        .timeline-item { margin-bottom: 30px; padding-left: 20px; border-left: 2px solid var(--primary); }
-        .timeline-date { font-size: 0.9rem; color: var(--text-muted); display: block; margin-bottom: 5px; }
+        .list-meta { 
+            display: flex; 
+            justify-content: space-between; 
+            color: var(--text-muted); 
+            font-size: 0.9rem; 
+            margin-bottom: 10px; 
+            flex-wrap: wrap;
+        }
+
+        .list-item ul { list-style-position: inside; margin-top: 10px; color: var(--text-muted); }
+        .list-item li { margin-bottom: 5px; }
+
+        /* Contact Section */
+        .contact-links { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+        .contact-item { text-align: center; }
+        .contact-item span { display: block; color: var(--text-muted); font-size: 0.9rem; margin-bottom: 5px; }
+        .contact-item a { color: var(--primary); font-size: 1.2rem; font-weight: 600; }
+        .contact-item a:hover { color: var(--accent); }
         
         /* Footer */
         footer { text-align: center; padding: 40px 0; color: var(--text-muted); border-top: 1px solid #334155; margin-top: 50px; }
 
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-        @media (max-width: 768px) { h1 { font-size: 2.5rem; } section { padding: 60px 0; } }
+        @media (max-width: 768px) { 
+            h1 { font-size: 2.5rem; } 
+            section { padding: 60px 0; }
+            .list-meta { flex-direction: column; gap: 5px; }
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
@@ -126,11 +155,8 @@
                 
                 <div class="btn-group">
                     <button class="btn btn-primary" onclick="toggleAbout()">About Me</button>
-                    
                     <a href="Navaneeth Rampally.pdf" target="_blank" class="btn btn-outline">Resume</a>
-                    
                     <a href="https://www.linkedin.com/in/navaneeth-rampally-4b5a1136a/" target="_blank" class="btn btn-outline">LinkedIn</a>
-                    
                     <a href="https://github.com/Navaneeth-Rampally" target="_blank" class="btn btn-outline">GitHub</a>
                 </div>
 
@@ -142,22 +168,24 @@
         </div>
     </section>
 
-    <section id="skills">
+    <section id="experience">
         <div class="container">
-            <h2>Technical Arsenal</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Artificial Intelligence</h3>
-                    <p>Deep Learning, Computer Vision, NLP, Streamlit.</p>
+            <h2>Experience</h2>
+            
+            <div class="list-item">
+                <div class="list-meta">
+                    <span>CyberMSI</span>
+                    <span>Aug 2025 - Sep 2025</span>
                 </div>
-                <div class="card">
-                    <h3>Cybersecurity</h3>
-                    <p>SOC Analysis, Ethical Hacking, Network Defense.</p>
-                </div>
-                <div class="card">
-                    <h3>Languages & Tools</h3>
-                    <p>Python, SQL, Git/GitHub, HTML/CSS.</p>
-                </div>
+                <h3>Cybersecurity Intern</h3>
+                <h4>SOC Analyst Role</h4>
+                <ul>
+                    <li>Monitored network traffic and security alerts in real-time using SIEM tools to detect potential threats.</li>
+                    <li>Analyzed logs from firewalls, IDS/IPS, and endpoints to identify anomalies and security incidents.</li>
+                    <li>Performed triage on security alerts, differentiating between false positives and critical threats.</li>
+                    <li>Assisted in incident response procedures and documentation of security breaches for future mitigation.</li>
+                    <li>Collaborated with the senior security team to implement defensive protocols and vulnerability assessments.</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -167,7 +195,6 @@
             <h2>Featured Projects</h2>
             <p style="color: var(--text-muted); margin-bottom: 20px;">Click on a project to view the code.</p>
             <div class="grid">
-                
                 <a href="https://github.com/Navaneeth-Rampally/accident-detection" target="_blank" class="card">
                     <h3>AI Accident Detection System</h3>
                     <p>A deep learning system detecting accidents in real-time from video feeds.</p>
@@ -185,18 +212,98 @@
                     <p>High-speed interactive chatbot using Streamlit and Groq API.</p>
                     <div class="tech-stack">Python • Streamlit • API Integration</div>
                 </a>
-
             </div>
         </div>
     </section>
 
-    <section id="experience">
+    <section id="skills">
         <div class="container">
-            <h2>Experience</h2>
-            <div class="timeline-item">
-                <h3>Cybersecurity Intern</h3>
-                <span class="timeline-date">Aug 2025 - Sep 2025 | CyberMSI</span>
-                <p>Security operations, threat analysis, and defensive protocols.</p>
+            <h2>Technical Arsenal</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Artificial Intelligence</h3>
+                    <p>Deep Learning, Computer Vision, NLP, Streamlit.</p>
+                </div>
+                <div class="card">
+                    <h3>Cybersecurity</h3>
+                    <p>SOC Analysis, Ethical Hacking, Network Defense, SIEM.</p>
+                </div>
+                <div class="card">
+                    <h3>Languages & Tools</h3>
+                    <p>Python, SQL, Git/GitHub, HTML/CSS.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <div class="container">
+            <h2>Certifications</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>CompTIA Security+</h3>
+                    <p>Global Certification for core security functions.</p>
+                    <div class="tech-stack">Candidate ID: COMP001022780954</div>
+                </div>
+                <div class="card">
+                    <h3>Cybersecurity Internship</h3>
+                    <p>CyberMSI</p>
+                    <div class="tech-stack">Practical Security Operations</div>
+                </div>
+                <div class="card">
+                    <h3>Python Programming</h3>
+                    <p>Lasya Infotech</p>
+                    <div class="tech-stack">Programming & Scripting</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+            
+            <div class="list-item">
+                <div class="list-meta">
+                    <span>Jun 2020 - Apr 2024</span>
+                    <span>CGPA: 7.67</span>
+                </div>
+                <h3>Bachelors of Technology: Information Technology</h3>
+                <p>St. Martins Engineering College, Hyderabad</p>
+            </div>
+
+            <div class="list-item">
+                <div class="list-meta">
+                    <span>Jun 2018 - Mar 2020</span>
+                    <span>CGPA: 9.2</span>
+                </div>
+                <h3>Intermediate: MPC</h3>
+                <p>Akshara Junior College, Hyderabad</p>
+            </div>
+
+            <div class="list-item">
+                <div class="list-meta">
+                    <span>Jun 2013 - Apr 2018</span>
+                    <span>CGPA: 9.0</span>
+                </div>
+                <h3>Matriculation: CBSE</h3>
+                <p>Shantiniketan Vidyalaya, Hyderabad</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-links">
+                <div class="contact-item">
+                    <span>Email Me</span>
+                    <a href="mailto:navaneethrampally@gmail.com">navaneethrampally@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <span>Call / WhatsApp</span>
+                    <a href="https://wa.me/917659998384" target="_blank">+91 7659998384</a>
+                </div>
             </div>
         </div>
     </section>
