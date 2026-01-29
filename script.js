@@ -74,14 +74,14 @@ aboutBtn.addEventListener("click", () => {
 
 
 /***********************
-  TYPING EFFECT
+  TYPING EFFECT (UPDATED FOR AI)
 ************************/
 const typingText = document.getElementById("typingText");
 const roles = [
-  "AI Development",
-  "Cybersecurity Engineering",
-  "SOC Analyst Workflows",
-  "Security Automation with Python"
+  "Agentic AI Systems",
+  "Generative AI Engineering",
+  "LLM Applications",
+  "Autonomous Agents"
 ];
 
 let roleIndex = 0;

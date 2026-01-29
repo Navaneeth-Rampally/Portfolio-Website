@@ -68,7 +68,7 @@ body{
   border-bottom:1px solid var(--border);
   backdrop-filter: blur(16px);
 }
-body.light .navbar{ background: rgba(255,255,255,0.76); }
+body.light .navbar{ background: rgba(255,255,255,0.76); } 
 
 .nav-inner{
   display:flex;

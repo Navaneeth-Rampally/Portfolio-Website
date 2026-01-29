@@ -1,44 +1,70 @@
-# Navaneeth Rampally - Portfolio Website
+# 🚀 Navaneeth Rampally | AI Engineer & Agentic Systems Developer
 
-This is my personal portfolio website built to showcase my skills, projects, certifications, and experience in **AI** and **Cybersecurity**.
+> **Architecting intelligent, autonomous software solutions.** > Currently building Agentic AI workflows at CPSIT Technologies LLP.
 
-## Live Preview
-You can host this website using **GitHub Pages** or any static hosting platform.
+---
 
-## Features
-- Ultra premium dark theme UI
-- Light/Dark theme toggle
-- Typing effect in hero section
-- Smooth scrolling navigation
-- Mobile responsive design (hamburger menu)
-- Projects filter (AI / Cybersecurity)
-- Project popup modal
-- Skills progress bars animation
-- Contact form (EmailJS integration)
-- Floating quick contact buttons (Email + WhatsApp)
-- Scroll to top button
-- Animated background (particles + glow)
+## 👨‍💻 Professional Summary
 
-## Technologies Used
-- HTML5
-- CSS3
-- JavaScript
-- EmailJS (for contact form)
+I am an **AI/ML Engineer** with a specialized focus on **Generative AI**, **Agentic Workflows**, and **Computer Vision**. 
 
-## Folder Structure
+I currently working in the domain of Artificial Intelligence, leveraging my strong foundation in Python automation and data analysis to build systems that can reason and act. My current work revolves around architecting **RAG (Retrieval-Augmented Generation)** pipelines, fine-tuning LLMs, and deploying multi-agent systems that solve complex real-world problems.
 
-## Setup Instructions
-1. Download or clone this project.
-2. Place your profile photo as `Navaneeth.png`.
-3. Place your resume as `Navaneeth Rampally.pdf`.
-4. Open `index.html` in your browser.
+---
 
-## EmailJS Contact Form Setup (Optional)
-To make the contact form work:
-1. Create an account at [EmailJS](https://www.emailjs.com/)
-2. Create an Email Service and Email Template
-3. Update these values in `script.js`:
-```js
-const PUBLIC_KEY = "YOUR_PUBLIC_KEY";
-const SERVICE_ID = "YOUR_SERVICE_ID";
-const TEMPLATE_ID = "YOUR_TEMPLATE_ID";
+## 💼 Work Experience
+
+### **AI/ML Engineer Trainee**
+**CPSIT Technologies LLP** | *Oct 2025 – Present*
+- **Agentic AI Development:** Designing autonomous multi-agent systems using **LangChain** and **LLMs** to automate complex business logic.
+- **RAG Architecture:** Building Retrieval-Augmented Generation pipelines to ground LLM responses in proprietary data, improving accuracy and reducing hallucinations.
+- **Full Stack AI:** Integrating Python-based AI backends with user-friendly frontend interfaces.
+
+---
+
+## 🛠️ Technical Arsenal
+
+| **Generative AI** | LangChain, OpenAI API, HuggingFace, RAG Pipelines, Vector DBs (Chroma/Pinecone), Groq API |
+| **Machine Learning** | PyTorch, Computer Vision (OpenCV), NLP, Deep Learning, ELM |
+| **Data Engineering** | Python (Advanced), SQL, Data Preprocessing, Log Analysis |
+| **Deployment** | Streamlit, Git/GitHub, Docker, API Integration |
+
+---
+
+## 💻 About This Portfolio Project
+
+This repository contains the source code for my personal portfolio. It was engineered to be **lightweight, fast, and visually immersive**, utilizing pure web technologies.
+
+### **Development Philosophy**
+- **Zero-Bloat Architecture:** Built with pure **HTML5, CSS3, and Vanilla JavaScript**.
+- **Agentic AI Themed:** The content and UI reflect my transition into autonomous AI systems.
+- **Interactive Elements:**
+  - **Particle Engine:** A custom HTML5 Canvas script that renders lightweight background particles.
+  - **Dynamic Typing Engine:** A custom typewriter effect showcasing my AI specializations.
+
+---
+
+## 📂 Key Projects Featured
+
+1.  **Groq API Conversational Agent**
+    * *Tech:* Python, Streamlit, LPU Inference.
+    * *Description:* An ultra-low latency chatbot leveraging Groq's LPU to demonstrate real-time AI inference capabilities.
+
+2.  **AI Accident Detection System**
+    * *Tech:* OpenCV, Deep Learning (CNN).
+    * *Description:* A computer vision system capable of detecting road accidents in real-time video feeds with 96.43% accuracy.
+
+3.  **Twitter Spam Detection**
+    * *Tech:* Extreme Learning Machines (ELM), NLP.
+    * *Description:* A machine learning model designed to classify and filter bot/spam activity on social media platforms using Natural Language Processing.
+
+---
+
+## 📬 Contact Me
+
+I am currently **Open to Work** and interested in roles related to **AI Engineering, LLM Development, and Agentic AI**.
+
+
+- **Email:** [navaneethrampally@gmail.com]
+- **WhatsApp:** [+91 7659998384]
+- **Location:** Hyderabad, Telangana
