@@ -259,9 +259,32 @@
         <button class="filter-btn active" data-filter="all">All</button>
         <button class="filter-btn" data-filter="agentic">Agentic AI</button>
         <button class="filter-btn" data-filter="ml">Deep Learning</button>
+        <button class="filter-btn" data-filter="cloud">Cloud & MLOps</button>
       </div>
 
       <div class="grid" id="projectGrid">
+
+        <div class="card project-card glass-card" data-category="ml"
+          data-title="IMDB Sentiment Analysis Pipeline"
+          data-desc="A modular, end-to-end Machine Learning pipeline. Features automated data ingestion from Hugging Face, advanced text preprocessing (NLTK), and a Streamlit UI. Designed with production-grade logging and a scalable modular structure."
+          data-tech="Python • Scikit-Learn • NLTK • Hugging Face • Streamlit"
+          data-github="https://github.com/Navaneeth-Rampally/Sentiment-Analysis.git"
+          data-demo="">
+          <h3>IMDB Sentiment Analysis Pipeline</h3>
+          <p>Production-grade NLP pipeline with automated data ingestion and real-time inference.</p>
+          <div class="tech-stack">NLP • Data Engineering • Scikit-Learn</div>
+        </div>
+
+        <div class="card project-card glass-card" data-category="cloud"
+          data-title="GCP Sentiment Analysis Deployment"
+          data-desc="Demonstrating full MLOps workflow by containerizing a sentiment analysis app with Docker and deploying it to Google Cloud Run. Utilized Google Container Registry (GCR) and Cloud Build for a scalable, serverless deployment."
+          data-tech="Docker • GCP • Cloud Run • GCR • MLOps"
+          data-github="https://github.com/Navaneeth-Rampally/sentiment-analysis-gcp.git"
+          data-demo="">
+          <h3>GCP Sentiment Analysis Deployment</h3>
+          <p>Full MLOps workflow: Containerizing and deploying scalable AI models to Google Cloud Platform.</p>
+          <div class="tech-stack">Docker • GCP • MLOps • Serverless</div>
+        </div>
 
         <div class="card project-card glass-card" data-category="ml"
           data-title="AI Accident Detection System"
@@ -484,4 +507,4 @@
   
   <script src="script.js"></script>
 </body>
-</html> 
+</html>
